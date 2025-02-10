@@ -1,4 +1,4 @@
-This example is a simpler version of the Todo Plugin example provided by SailPoint Compass group. Some of the videos we also too cmplicated.
+This example is a simpler version of the Todo Plugin example provided by SailPoint Compass group. Some of the videos were also too complicated.
 
 How to add custom attributes to the ManagedAttribute table.
 https://community.sailpoint.com/t5/IdentityIQ-Wiki/Creating-a-extended-attribute-on-certification-item-and/ta-p/200449
