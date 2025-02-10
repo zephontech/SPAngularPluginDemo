@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+    <body>
+
+        <ui:composition>
+
+            <div class="container" ng-app="EntCertJSApp" ng-controller="EntCertJSController as ctrl">
+                <div class="row m-t">
+                    
+                    <div class="panel">
+                        <div class="panel-heading bg-light lter">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <span class="panel-title"><b>Entitlement List</b></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <table class="table m-t table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Application</th>
+                                            <th>Entitlement Name</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="mydata in ctrl.mydata" ng-class="{ 'success' : mydata.complete }">
+                                            <td>{{mydata.applicationName}}</td>
+                                            <td>{{mydata.managedAttributeName}}</td>
+                                            <td>
+                                                <button class="btn btn-primary btn-sm" ng-click="ctrl.viewEntitlement(mydata)">View</button>
+                                                <button class="btn btn-primary btn-sm" ng-click="ctrl.certify(mydata.managedAttributeId)" ng-if="!mydata.complete">Certify</button>
+                                                <button class="btn btn-primary btn-sm" ng-click="ctrl.reset(mydata.managedAttributeId)" ng-if="mydata.complete">Reset</button>
+                                             </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="#{plugins.requestContextPath}/plugin/EntitlementCertificationPlugin/ui/js/SailPointBundleLibrary.js"></script>
+            <script src="#{plugins.requestContextPath}/plugin/EntitlementCertificationPlugin/ui/js/EntCertModule.js"></script>
+        </ui:composition>
+    </body>
+</html>

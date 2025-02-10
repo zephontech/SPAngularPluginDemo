@@ -1,0 +1,20 @@
+
+--
+-- MySQL DDL plugin script
+--
+CREATE TABLE entitlement_certification (
+id varchar(32) not null,
+somedata varchar(255),
+primary key (id)
+);
+
+insert into entitlement_certification (id,somedata) values('10cbc101b529482fb5932fd5862b9439','Some Data One');
+insert into entitlement_certification (id,somedata) values('11cbc101b529482fb5932fd5862b9439','Some Data Two');
+insert into entitlement_certification (id,somedata) values('12cbc101b529482fb5932fd5862b9439','Some Data Three');
+insert into entitlement_certification (id,somedata) values('13cbc101b529482fb5932fd5862b9439','Some Data Four');
+insert into entitlement_certification (id,somedata) values('14cbc101b529482fb5932fd5862b9439','Some Data Five');
+insert into entitlement_certification (id,somedata) values('15cbc101b529482fb5932fd5862b9439','Some Data Six');
+insert into entitlement_certification (id,somedata) values('16cbc101b529482fb5932fd5862b9439','Some Data Seven');
+insert into entitlement_certification (id,somedata) values('17cbc101b529482fb5932fd5862b9439','Some Data Eight');
+
+
